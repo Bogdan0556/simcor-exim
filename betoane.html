@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stație de Betoane - SimcorExim</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+html, body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #202020;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+section {
+    width: 65%;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-left: 40px;
+    color: white;
+}
+
+section p {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-left: 40px;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: rgba(17, 17, 17, .7);
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover:before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer {
+    background-color: rgb(17, 17, 17);
+    padding: 20px 10px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+.footer .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.footer .copyright {
+    color: #7a7a7a;
+    font-size: 10px;
+    margin-bottom: 3px;
+}
+
+.footer .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.footer .social-icons a {
+    color: #7a7a7a;
+    margin: 0 8px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    section {
+        width: 90%;
+    }
+    h1, section p, ul {
+        padding-left: 10px;
+    }
+    iframe {
+        height: 300px;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(17, 17, 17, 0.9);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .nav-links.active {
+        display: flex;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+    .nav-links a {
+        display: block;
+        padding: 10px;
+    }
+    .menu-toggle:active {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+    opacity: 0;
+    animation: fadeUp 0.5s ease-out forwards;
+}
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo"><span style="color:#3ec73a">Simcor</span>Exim</a>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links">
+          <a href="despre.html">Despre</a>
+          <a href="betoane.html">Statii de Betoane</a>
+          <a href="utilaje.html">Inchirieri Utilaje</a>
+          <a href="balast.html">Balast</a>
+          <a href="spatiicomerciale.html">Inchirieri Spații Comerciale</a>
+          <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <section>
+        <h1 class="fade-up" style="animation-delay:0s;">Stație de Betoane</h1>
+        <p class="fade-up" style="animation-delay:0.1s;">
+            SC SimcorExim SRL dispune de o stație de betoane modernă, proiectată pentru a răspunde celor mai exigente cerințe ale clienților din domeniul construcțiilor. Situată strategic pentru a asigura accesibilitate maximă, stația noastră este echipată cu tehnologie de ultimă generație care garantează un proces de producție eficient și calitativ.
+        </p>
+
+        <p class="fade-up" style="animation-delay:0.2s;"><b>Caracteristici principale:</b></p>
+        <ul class="fade-up" style="animation-delay:0.3s; color: white; padding-left: 60px;">
+            <li><b>Capacitate mare de producție:</b> Stația noastră poate produce o varietate de tipuri de beton, adaptate specificațiilor clienților, asigurând livrarea rapidă și în cantități mari.</li>
+            <li><b>Control riguros al calității:</b> Fiecare lot de beton este supus unor teste riguroase, pentru a ne asigura că produsele noastre respectă standardele de calitate cele mai înalte.</li>
+            <li><b>Personal calificat:</b> Echipa noastră de specialiști are experiență vastă în domeniu, fiind dedicată îmbunătățirii continue a proceselor și produselor.</li>
+            <li><b>Sustenabilitate:</b> Ne angajăm să utilizăm materiale ecologice și să implementăm practici de producție durabile, contribuind astfel la protejarea mediului înconjurător.</li>
+        </ul>
+
+        <p class="fade-up" style="animation-delay:0.4s;"><b>Produse oferite:</b></p>
+        <ul class="fade-up" style="animation-delay:0.5s; color: white; padding-left: 60px;">
+            <li><b>Beton</b> pentru construcții civile și industriale</li>
+            <li><b>Beton</b> pentru fundații și structuri de rezistență</li>
+            <li><b>Beton</b> special (rezistent la apă, la îngheț, etc.)</li>
+        </ul>
+
+        <p class="fade-up" style="animation-delay:0.6s;">
+            Colaborăm cu o gamă variată de clienți, de la antreprenori mari până la dezvoltatori imobiliari și proiecte rezidențiale, oferindu-le soluții personalizate pentru nevoile lor specifice.
+            Alegeți SC SimcorExim SRL pentru parteneriate durabile și produse de calitate superioară!
+        </p>
+
+        <div class="fade-up" style="animation-delay:0.7s; margin-top: 40px;">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2841.255285410012!2d24.547525176593506!3d44.59180379122135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40ad5ad991eeb63b%3A0xe5d4d4ac87edd2f1!2sSimcor%20Exim%20S.R.L.!5e0!3m2!1sen!2sro!4v1726769448030!5m2!1sen!2sro"
+                width="100%"
+                height="600"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+    <div class="footer fade-up" style="animation-delay:0.8s;">
+        <div class="social-icons">
+          <a href="https://www.facebook.com/p/Simcor-Exim-100054203093455/" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/simcoreximbetoane?igsh=MWJna3gyZGEwbnQyeA==" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p class="title"><span style="color:#3ec73a">Simcor</span><span style="color:white">Exim</span></p>
+        <p class="copyright">&copy; 2024 Simcor Exim SRL</p>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.nav-links');
+            const icon = document.querySelector('.menu-toggle i');
+            menu.classList.toggle('active');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balast - SimcorExim</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+html, body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #202020;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+section {
+    width: 65%;
+    margin: 0 auto;
+    flex: 1;
+}
+
+section:last-of-type {
+    margin-bottom: 40px;
+}
+
+h1 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-left: 40px;
+    color: white;
+}
+
+section p {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-left: 40px;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: rgba(17, 17, 17, .7);
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover:before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer {
+    background-color: rgb(17, 17, 17);
+    padding: 20px 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+.footer .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.footer .copyright {
+    color: #7a7a7a;
+    font-size: 10px;
+    margin-bottom: 3px;
+}
+
+.footer .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.footer .social-icons a {
+    color: #7a7a7a;
+    margin: 0 8px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    color: white;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+    opacity: 0;
+    animation: fadeUp 0.5s ease-out forwards;
+}
+
+@media (max-width: 768px) {
+    section {
+        width: 90%;
+    }
+    h1, section p, ul {
+        padding-left: 10px;
+    }
+    section:last-of-type {
+        margin-bottom: 20px;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(17, 17, 17, 0.9);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .nav-links.active {
+        display: flex;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+    .nav-links a {
+        display: block;
+        padding: 10px;
+    }
+    .menu-toggle:active {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo"><span style="color:#3ec73a">Simcor</span>Exim</a>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links">
+          <a href="despre.html">Despre</a>
+          <a href="betoane.html">Statii de Betoane</a>
+          <a href="utilaje.html">Inchirieri Utilaje</a>
+          <a href="balast.html">Balast</a>
+          <a href="spatiicomerciale.html">Inchirieri Spații Comerciale</a>
+          <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <section>
+        <h1 class="fade-up" style="animation-delay:0s;">Balast</h1>
+        <p class="fade-up" style="animation-delay:0.1s;">
+            La Simcor Exim SRL, ne mândrim cu furnizarea de balast de cea mai bună calitate, ideal pentru diverse proiecte de construcții și amenajări. Balastul nostru este extras și prelucrat conform celor mai înalte standarde de siguranță și calitate, asigurând o bază solidă și durabilă pentru fundații, terasamente, drumuri și alte lucrări de infrastructură.
+        </p>
+        <p class="fade-up" style="animation-delay:0.2s;"><b>Caracteristicile balastului oferit de Simcor Exim SRL:</b></p>
+        <ul class="fade-up" style="animation-delay:0.3s; color: white; padding-left: 60px;">
+            <li><b>Granulație optimă:</b> Balastul nostru este atent selecționat și sortat, având o granulație perfect adaptată pentru utilizarea în diverse proiecte de construcții.</li>
+            <li><b>Calitate superioară:</b> Oferim balast natural, extras din surse certificate, garantând astfel un material durabil și rezistent la condițiile de mediu.</li>
+            <li><b>Utilizare versatilă:</b> Potrivit pentru drumuri, fundații de clădiri, platforme industriale și alte aplicații din construcții.</li>
+            <li><b>Livrare promptă:</b> Asigurăm transport rapid și eficient către șantierul dumneavoastră.</li>
+        </ul>
+        <p class="fade-up" style="animation-delay:0.4s;">
+            Fie că aveți nevoie de balast pentru un proiect de infrastructură amplu sau pentru lucrări de mică amploare, echipa Simcor Exim SRL este partenerul ideal pentru a vă oferi materialele necesare la cele mai bune standarde.
+        </p>
+    </section>
+
+    <div class="footer fade-up" style="animation-delay:0.5s;">
+        <div class="social-icons">
+          <a href="https://www.facebook.com/p/Simcor-Exim-100054203093455/" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/simcoreximbetoane?igsh=MWJna3gyZGEwbnQyeA==" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p class="title"><span style="color:#3ec73a">Simcor</span><span style="color:white">Exim</span></p>
+        <p class="copyright">&copy; 2024 Simcor Exim SRL</p>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.nav-links');
+            const icon = document.querySelector('.menu-toggle i');
+            menu.classList.toggle('active');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        }
+    </script>
+
+</body>
+</html>

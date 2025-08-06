@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - SimcorExim</title>
+    <link rel="stylesheet" href="startstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <meta name="keywords" content="Simcor, Simcor Exim, beton, stație betoane, închirieri utilaje, balast, spații comerciale, construcții, Olt, Scornicești, Slatina, livrare beton, ciment, hale industriale">
+    <meta name="description" content="SimcorExim SRL - Beton de calitate, stație modernă, utilaje de construcții, balast și spații comerciale în județul Olt.">
+    <meta name="author" content="SimcorExim SRL">
+    <meta name="robots" content="index, follow">
+
+
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="entrybackground.mp4" type="video/mp4">
+    </video>
+    <nav>
+        <a href="index.html" class="logo"><span style="color:#3ec73a">Simcor</span>Exim</a>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links">
+            <a href="despre.html">Despre</a>
+            <a href="betoane.html">Statii de Betoane</a>
+            <a href="utilaje.html">Inchirieri Utilaje</a>
+            <a href="balast.html">Balast</a>
+            <a href="spatiicomerciale.html">Inchirieri Spații Comerciale</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="content">
+        <h1 class="fade-up" style="animation-delay: 0s;"><span style="color:#3ec73a">Simcor</span><span style="color:white">Exim</span></h1>
+        <p class="fade-up" style="animation-delay: 0.1s;">Simcor Exim este o societate cu sediul in orașul Scornicesti, aceasta produce <br> beton de înaltă calitate cu livrare rapidă și eficientă.</p>
+        <a href="mailto:simcor-betoane@yahoo.com?subject=Cerere%20oferta" class="button fade-up" style="animation-delay: 0.2s;">Cere ofertă</a>
+    </div>
+
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="https://www.facebook.com/p/Simcor-Exim-100054203093455/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/simcoreximbetoane?igsh=MWJna3gyZGEwbnQyeA==" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p class="title"><span style="color:#3ec73a">Simcor</span><span style="color:white">Exim</span></p>
+        <p class="copyright">&copy; 2024 Simcor Exim SRL</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.nav-links');
+            const icon = document.querySelector('.menu-toggle i');
+            menu.classList.toggle('active');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        }
+    </script>
+</body>
+</html>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(50%);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: rgba(17, 17, 17, 0.7);
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 2;
+}
+
+.nav-links {
+    display: flex;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 8px 12px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-toggle i {
+    transition: transform 0.3s ease-in-out;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-up {
+    opacity: 0;
+    animation: fadeUp 0.5s ease-out forwards;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(17, 17, 17, 0.9);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 10px;
+    }
+
+    .menu-toggle:active {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
