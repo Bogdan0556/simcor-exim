@@ -27,6 +27,7 @@ html, body {
 section {
     width: 65%;
     margin: 0 auto;
+    flex: 1;
 }
 
 h1 {
@@ -144,31 +145,21 @@ nav {
     color: white;
 }
 
-/* Utilaje */
-.utilaj-container {
+.image-container {
     display: flex;
-    align-items: center;
-    margin-top: 20px;
+    justify-content: center;
     gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
 }
 
-/* Spațiu sub ultima imagine */
-.utilaj-container:last-of-type {
-    margin-bottom: 40px;
-}
-
-.utilaj-container img {
-    width: 300px;
+.image-container img {
+    width: 32%;
     height: auto;
     border-radius: 5px;
 }
 
-.utilaj-container p {
-    color: white;
-    flex: 1;
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
     section {
         width: 90%;
@@ -201,15 +192,8 @@ nav {
     .menu-toggle:active {
         transform: rotate(180deg);
     }
-    .utilaj-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .utilaj-container img {
-        width: 100%;
-    }
-    .utilaj-container:last-of-type {
-        margin-bottom: 20px;
+    .image-container img {
+        width: 90%;
     }
 }
 
@@ -218,7 +202,6 @@ nav {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Fade-up Animation */
 @keyframes fadeUp {
     from { opacity: 0; transform: translateY(15px); }
     to { opacity: 1; transform: translateY(0); }
@@ -262,18 +245,14 @@ nav {
             Mai jos, găsești o selecție de imagini cu utilajele disponibile în portofoliul nostru.
         </p>
 
-        <div class="utilaj-container fade-up" style="animation-delay:0.5s;">
-            <img src="XSH01165.jpg" alt="Utilaj Simcor Exim">
-            <p><b>NUME-UTILAJ:</b> Acest utilaj este unul dintre cele mai performante din portofoliu, oferind fiabilitate și eficiență în orice proiect.</p>
-        </div>
-
-        <div class="utilaj-container fade-up" style="animation-delay:0.6s;">
-            <img src="XSH01165.jpg" alt="Utilaj Simcor Exim">
-            <p><b>NUME-UTILAJ2:</b> Utilaj performant, ideal pentru construcții industriale și civile, oferind cele mai bune soluții tehnice.</p>
+        <div class="image-container fade-up" style="animation-delay:0.5s;">
+            <img src="XSH01165.jpg">
+            <img src="XSH01143.jpg">
+            <img src="XSH01153.jpg">
         </div>
     </section>
 
-    <div class="footer fade-up" style="animation-delay:0.7s;">
+    <div class="footer fade-up" style="animation-delay:0.6s;">
         <div class="social-icons">
           <a href="https://www.facebook.com/p/Simcor-Exim-100054203093455/" target="_blank"><i class="fab fa-facebook"></i></a>
           <a href="https://www.instagram.com/simcoreximbetoane?igsh=MWJna3gyZGEwbnQyeA==" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -293,4 +272,3 @@ nav {
     </script>
 </body>
 </html>
-
